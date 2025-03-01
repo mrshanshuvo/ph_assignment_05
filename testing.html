@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <body>
+      <div class="bg-[#F4F7FF] min-h-screen pt-6">
+        <!-- Header -->
+        <header class="mx-36 bg-white mb-5 p-6 rounded-3xl">
+          <nav class="flex justify-between items-center">
+            <!-- Left Side -->
+            <div class="flex items-center gap-3">
+              <img class="w-12" src="./assets/logo.png" alt="DevBoard Logo" />
+              <h3 class="text-lg font-semibold">
+                Dev<span class="font-bold">Board</span>
+              </h3>
+            </div>
+
+            <!-- Right Side -->
+            <div class="flex items-center gap-9">
+              <div class="flex items-center gap-1">
+                <img class="w-6" src="./assets/checkbox.png" alt="Tasks Icon" />
+                <h3 class="text-lg font-medium">23</h3>
+              </div>
+              <img
+                class="w-8"
+                src="./assets/theme-btn.png"
+                alt="Theme Toggle Button"
+              />
+            </div>
+          </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="ml-36 mr-36 bg-white grid grid-cols-[3fr_1fr] gap-6 p-6">
+          <!-- left section -->
+          <section class="w-full bg-blue-200 p-4">
+            <h2 class="text-2xl font-semibold mb-4">
+              Left Section (3/4 width)
+            </h2>
+            <p>
+              This section takes up 3/4 of the total width of the container. You
+              can add more content here to fill the space. For example, text,
+              images, or cards.
+            </p>
+            <ul class="mt-4 space-y-2">
+              <li>Item 1: Information about the left section.</li>
+              <li>Item 2: More details can go here.</li>
+              <li>Item 3: You can add any content that suits your layout.</li>
+            </ul>
+          </section>
+
+          <!-- right section -->
+          <section class="w-full bg-green-200 p-4">
+            <h2 class="text-2xl font-semibold mb-4">
+              Right Section (1/4 width)
+            </h2>
+            <p>
+              This section takes up 1/4 of the total width. It can be used for
+              supplementary information or a smaller sidebar. Here, you can add
+              widgets, links, or any other content that fits.
+            </p>
+            <button class="btn btn-primary mt-4">Click Me</button>
+          </section>
+        </main>
+      </div>
+    </body>
+  </body>
+</html>
