@@ -56,13 +56,111 @@
       </nav>
     </header>
 
-    <main
-      class="ml-36 mr-36 bg-white grid grid-cols-[3fr_1fr] gap-6 rounded-3xl"
-    >
+    <main class="mx-36 grid grid-cols-[3fr_1fr] gap-6 rounded-3xl">
       <!-- left section -->
-      <section class="w-full"></section>
+      <section class="w-full rounded-3xl bg-white p-5">
+        <!-- upper part with 3 columns -->
+        <div class="grid grid-cols-[1fr_2fr_1fr] gap-5">
+          <!-- First Column -->
+          <div
+            class="flex justify-center items-center gap-5 p-8 bg-[#F4F7FF] rounded-xl"
+          >
+            <img
+              class="p-4 bg-white rounded-full"
+              src="./assets/checkbox.png"
+              alt=""
+            />
+            <div>
+              <p
+                class="font-medium text-[#00303C] opacity-80 whitespace-nowrap"
+              >
+                Task Assigned
+              </p>
+              <p class="text-3xl font-bold text-[#00303C]">05</p>
+            </div>
+          </div>
+          <!-- Middle Column (2/4) -->
+          <div
+            class="bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] flex items-end justify-start text-white rounded-xl gap-5 pb-8 px-4"
+          >
+            <img src="./assets/board.png" alt="" />
+            <div>
+              <p class="text-2xl font-medium">Discover Something New Today!</p>
+            </div>
+          </div>
+          <!-- Last Column -->
+          <div
+            class="flex justify-center items-center gap-5 p-8 bg-[#F4F7FF] rounded-xl"
+          >
+            <img
+              class="p-4 bg-white rounded-full"
+              src="./assets/calender.png"
+              alt=""
+            />
+            <div class="text-xl">
+              <p class="font-medium text-[#00303C]">Wed ,</p>
+              <p class="font-bold text-[#00303C] whitespace-nowrap">
+                Jul 28 2025
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- horizontal line -->
+        <div
+          class="border-t-2 border-dashed border-[#3752FD33] my-8 h-[0.8px]"
+        ></div>
+        <!-- lower part with 6 divs in a grid -->
+        <div class="grid grid-cols-3 gap-4">
+          <div class="flex flex-col p-6 bg-[#F4F7FF] rounded-2xl items-start">
+            <div class="text-[#00303C] px-4 py-2 bg-white">ShopEase</div>
+            <div class="my-4 text-[#00303C] text-xl font-medium">
+              Fix Mobile Button Issue
+            </div>
+            <div class="p-4 opacity-50 bg-white">
+              Debug using Chrome DevTools, check for overlapping elements
+            </div>
+            <div
+              class="border-t-2 border-dashed border-[#3752FD33] my-3 h-[0.8px]"
+            ></div>
+            <div class="flex gap-4">
+              <div class="text-[#00303C]">
+                <p class="text-sm opacity-70">Deadline</p>
+                <p class="font-medium whitespace-nowrap">21 March 2025</p>
+              </div>
+              <div>
+                <button class="px-3 py-[10px] bg-[#3752FD] rounded-lg">
+                  <p class="text-white text-[16px] font-medium">Completed</p>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- right section -->
-      <section class="w-full"></section>
+      <section class="w-full">
+        <!-- Right Section (Activity Log) -->
+        <div
+          class="bg-white p-6 rounded-2xl flex flex-col justify-center items-center"
+        >
+          <div class="flex gap-3 justify-center items-center mb-4">
+            <img src="./assets/activity.png" alt="" />
+            <h2 class="text-xl font-medium">Activity Log</h2>
+          </div>
+          <div>
+            <button
+              id="clear-history"
+              class="px-5 py-[10px] bg-[#3752FD] rounded-lg"
+            >
+              <p class="text-white text-[16px] font-medium">Clear History</p>
+            </button>
+          </div>
+          <div
+            class="border-t-2 w-full border-dashed border-[#3752FD33] mt-3 h-[0.8px]"
+          ></div>
+          <div id="activity-log" class="mt-8"></div>
+        </div>
+      </section>
     </main>
 
     <script src="./scripts/script.js"></script>
