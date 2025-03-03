@@ -78,14 +78,14 @@
                 Task Assigned
               </p>
               <!-- Task Assigned -->
-              <p id="task-assigned" class="text-3xl font-bold text-[#00303C]">
+              <p id="task-assigned" class="text-2xl font-bold text-[#00303C]">
                 05
               </p>
             </div>
           </div>
           <!-- Middle Column (2/4) -->
           <div
-            class="bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] flex items-end justify-start text-white rounded-xl gap-5 pb-8 px-4"
+            class="bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] flex items-end justify-start text-white rounded-xl gap-5 pb-8 px-2"
           >
             <img src="./assets/board.png" alt="" />
             <div>
@@ -115,16 +115,17 @@
         ></div>
         <!-- lower part with 6 divs in a grid -->
         <div class="grid grid-cols-3 gap-4">
+          <!-- card 1 -->
           <div class="flex flex-col p-6 bg-[#F4F7FF] rounded-2xl items-start">
             <div class="text-[#00303C] px-4 py-2 bg-white">ShopEase</div>
-            <div class="my-4 text-[#00303C] text-xl font-medium">
+            <div class="task-title my-4 text-[#00303C] text-xl font-medium">
               Fix Mobile Button Issue
             </div>
             <div class="p-4 opacity-50 bg-white">
-              Debug using Chrome DevTools, check for overlapping elements
+              Store the user's preference in localStorage, update CSS
             </div>
             <div
-              class="border-t-2 w-full border-dashed border-[#3752FD33] my-3 h-[0.8px]"
+              class="border-t-2 w-full border-dashed border-[#3752FD33] my-4 h-[0.8px]"
             ></div>
             <div class="flex gap-5">
               <div class="text-[#00303C]">
@@ -134,8 +135,144 @@
               <div>
                 <!-- Completed Button -->
                 <button
-                  id="completed-btn"
-                  class="px-3 py-[10px] bg-[#3752FD] rounded-lg"
+                  class="completed-btn px-3 py-[10px] bg-[#3752FD] rounded-lg"
+                >
+                  <p class="text-white text-[16px] font-medium">Completed</p>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- card 2 -->
+          <div class="flex flex-col p-6 bg-[#F4F7FF] rounded-2xl items-start">
+            <div class="text-[#00303C] px-4 py-2 bg-white">CloudSync</div>
+            <div class="task-title my-4 text-[#00303C] text-xl font-medium">
+              Add Dark Mode
+            </div>
+            <div class="p-4 opacity-50 bg-white">
+              Store the user's preference in localStorage, update CSS
+            </div>
+            <div
+              class="border-t-2 w-full border-dashed border-[#3752FD33] my-4 h-[0.8px]"
+            ></div>
+            <div class="flex gap-5">
+              <div class="text-[#00303C]">
+                <p class="text-sm opacity-70">Deadline</p>
+                <p class="font-medium whitespace-nowrap">21 March 2025</p>
+              </div>
+              <div>
+                <!-- Completed Button -->
+                <button
+                  class="completed-btn px-3 py-[10px] bg-[#3752FD] rounded-lg"
+                >
+                  <p class="text-white text-[16px] font-medium">Completed</p>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- card 3 -->
+          <div class="flex flex-col p-6 bg-[#F4F7FF] rounded-2xl items-start">
+            <div class="text-[#00303C] px-4 py-2 bg-white">SwiftPay</div>
+            <div class="task-title my-4 text-[#00303C] text-xl font-medium">
+              Optimize Home page
+            </div>
+            <div class="p-4 opacity-50 bg-white">
+              Store the user's preference in localStorage, update CSS
+            </div>
+            <div
+              class="border-t-2 w-full border-dashed border-[#3752FD33] my-4 h-[0.8px]"
+            ></div>
+            <div class="flex gap-5">
+              <div class="text-[#00303C]">
+                <p class="text-sm opacity-70">Deadline</p>
+                <p class="font-medium whitespace-nowrap">21 March 2025</p>
+              </div>
+              <div>
+                <!-- Completed Button -->
+                <button
+                  class="completed-btn px-3 py-[10px] bg-[#3752FD] rounded-lg"
+                >
+                  <p class="text-white text-[16px] font-medium">Completed</p>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- card 4 -->
+          <div class="flex flex-col p-6 bg-[#F4F7FF] rounded-2xl items-start">
+            <div class="text-[#00303C] px-4 py-2 bg-white">Meta</div>
+            <div class="task-title my-4 text-[#00303C] text-xl font-medium">
+              Add new emoji 🤲
+            </div>
+            <div class="p-4 opacity-50 bg-white">
+              Store the user's preference in localStorage, update CSS
+            </div>
+            <div
+              class="border-t-2 w-full border-dashed border-[#3752FD33] my-4 h-[0.8px]"
+            ></div>
+            <div class="flex gap-5">
+              <div class="text-[#00303C]">
+                <p class="text-sm opacity-70">Deadline</p>
+                <p class="font-medium whitespace-nowrap">21 March 2025</p>
+              </div>
+              <div>
+                <!-- Completed Button -->
+                <button
+                  class="completed-btn px-3 py-[10px] bg-[#3752FD] rounded-lg"
+                >
+                  <p class="text-white text-[16px] font-medium">Completed</p>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- card 5 -->
+          <div class="flex flex-col p-6 bg-[#F4F7FF] rounded-2xl items-start">
+            <div class="text-[#00303C] px-4 py-2 bg-white">Google LLC</div>
+            <div class="task-title my-4 text-[#00303C] text-xl font-medium">
+              Integrate OpenAI API
+            </div>
+            <div class="p-4 opacity-50 bg-white">
+              Store the user's preference in localStorage, update CSS
+            </div>
+            <div
+              class="border-t-2 w-full border-dashed border-[#3752FD33] my-4 h-[0.8px]"
+            ></div>
+            <div class="flex gap-5">
+              <div class="text-[#00303C]">
+                <p class="text-sm opacity-70">Deadline</p>
+                <p class="font-medium whitespace-nowrap">23 March 2025</p>
+              </div>
+              <div>
+                <!-- Completed Button -->
+                <button
+                  class="completed-btn px-3 py-[10px] bg-[#3752FD] rounded-lg"
+                >
+                  <p class="text-white text-[16px] font-medium">Completed</p>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- card 6 -->
+          <div class="flex flex-col p-6 bg-[#F4F7FF] rounded-2xl items-start">
+            <div class="text-[#00303C] px-4 py-2 bg-white">Glassdoar</div>
+            <div
+              class="task-title my-4 text-[#00303C] text-xl font-medium text-nowrap"
+            >
+              Improve Job searching
+            </div>
+            <div class="p-4 opacity-50 bg-white">
+              Store the user's preference in localStorage, update CSS
+            </div>
+            <div
+              class="border-t-2 w-full border-dashed border-[#3752FD33] my-4 h-[0.8px]"
+            ></div>
+            <div class="flex gap-5">
+              <div class="text-[#00303C]">
+                <p class="text-sm opacity-70">Deadline</p>
+                <p class="font-medium whitespace-nowrap">21 March 2025</p>
+              </div>
+              <div>
+                <!-- Completed Button -->
+                <button
+                  class="completed-btn px-3 py-[10px] bg-[#3752FD] rounded-lg"
                 >
                   <p class="text-white text-[16px] font-medium">Completed</p>
                 </button>

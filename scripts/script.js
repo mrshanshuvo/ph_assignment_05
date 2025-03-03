@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const completedButton = document.getElementById("completed-btn");
   const taskAssignedElement = document.getElementById("task-assigned");
   const taskDoneElement = document.getElementById("task-done");
   const activityLog = document.getElementById("activity-log");
@@ -8,7 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to Add to Activity Log
   function addToActivityLog(taskTitle) {
     const time = new Date().toLocaleTimeString();
-    activityLog.innerHTML += `<p class="text-gray-600 text-sm">You have completed the task "${taskTitle}" at ${time}</p>`;
+    const logEntry = document.createElement("p");
+    logEntry.className = "text-gray-600 text-sm";
+    logEntry.textContent = `You have completed the task "${taskTitle}" at ${time}`;
+    activityLog.appendChild(logEntry);
   }
 
   // Function to Clear Activity Log
@@ -16,24 +18,34 @@ document.addEventListener("DOMContentLoaded", function () {
     activityLog.innerHTML = "";
   });
 
-  // Completed Button Click Event
-  completedButton.addEventListener("click", function () {
-    let taskAssigned = parseInt(taskAssignedElement.textContent);
-    let taskDone = parseInt(taskDoneElement.textContent);
+  // Completed Button Click Event for all buttons
+  const completedButtons = document.querySelectorAll(".completed-btn");
 
-    if (taskAssigned > 0) {
-      taskAssignedElement.textContent = taskAssigned - 1;
-      taskDoneElement.textContent = taskDone + 1;
-      alert("Board updated successfully");
+  completedButtons.forEach((completedButton) => {
+    completedButton.addEventListener("click", function () {
+      let taskAssigned = parseInt(taskAssignedElement.textContent);
+      let taskDone = parseInt(taskDoneElement.textContent);
 
-      const taskTitleElement = document.querySelector(
-        ".grid .text-xl.font-medium"
-      );
-      if (taskTitleElement) {
-        addToActivityLog(taskTitleElement.textContent);
+      if (taskAssigned > 0) {
+        taskAssignedElement.textContent = taskAssigned - 1;
+        taskDoneElement.textContent = taskDone + 1;
+        alert("Board updated successfully");
+
+        // Fetch the task title from the current card (button's parent)
+        const taskTitleElement = completedButton
+          .closest(".flex.flex-col")
+          .querySelector(".task-title");
+
+        if (taskTitleElement && !completedButton.disabled) {
+          addToActivityLog(taskTitleElement.textContent);
+        }
+
+        // Disable the button after clicking
+        completedButton.disabled = true;
+        completedButton.classList.add("opacity-50", "cursor-not-allowed");
+      } else {
+        alert("No tasks left to complete.");
       }
-    } else {
-      alert("No tasks left to complete.");
-    }
+    });
   });
 });
