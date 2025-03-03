@@ -25,7 +25,7 @@
       }
     </style>
   </head>
-  <body class="bg-[#F4F7FF] min-h-screen pt-6 font-poppins">
+  <body class="bg-[#F4F7FF] min-h-screen pt-6 font-poppins pb-72">
     <header class="mx-36 bg-white mb-5 p-6 rounded-3xl">
       <nav class="flex justify-between items-center">
         <!-- Left nav -->
@@ -48,9 +48,11 @@
           </div>
           <div class="bg-[#F4F7FF] p-3 rounded-[32px]">
             <img
-              class="w-10 h-10"
+              id="theme-toggle-img"
+              class="w-10 h-10 cursor-pointer"
               src="./assets/theme-btn.png"
               alt="Theme Toggle Button"
+              onclick="changeBackgroundColorRandomly()"
             />
           </div>
         </div>
@@ -84,14 +86,15 @@
             </div>
           </div>
           <!-- Middle Column (2/4) -->
-          <div
+          <a
+            href="./blog.html"
             class="bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] flex items-end justify-start text-white rounded-xl gap-5 pb-8 px-2"
           >
-            <img src="./assets/board.png" alt="" />
+            <img src="./assets/board.png" alt="Board Image" />
             <div>
               <p class="text-2xl font-medium">Discover Something New Today!</p>
             </div>
-          </div>
+          </a>
           <!-- Last Column -->
           <div
             class="flex justify-center items-center gap-5 p-8 bg-[#F4F7FF] rounded-xl"
@@ -102,9 +105,14 @@
               alt=""
             />
             <div class="text-xl">
-              <p class="font-medium text-[#00303C]">Wed ,</p>
-              <p class="font-bold text-[#00303C] whitespace-nowrap">
-                Jul 28 2025
+              <p class="font-medium text-[#00303C]" id="day-of-week">
+                <!-- The day of the week -->
+              </p>
+              <p
+                class="font-bold text-[#00303C] whitespace-nowrap"
+                id="current-date"
+              >
+                <!-- The current date -->
               </p>
             </div>
           </div>
@@ -135,7 +143,7 @@
               <div>
                 <!-- Completed Button -->
                 <button
-                  class="completed-btn px-3 py-[10px] bg-[#3752FD] rounded-lg"
+                  class="completed-btn px-3 py-[10px] bg-[#3752FD] rounded-lg cursor-pointer"
                 >
                   <p class="text-white text-[16px] font-medium">Completed</p>
                 </button>
@@ -162,7 +170,7 @@
               <div>
                 <!-- Completed Button -->
                 <button
-                  class="completed-btn px-3 py-[10px] bg-[#3752FD] rounded-lg"
+                  class="completed-btn px-3 py-[10px] bg-[#3752FD] rounded-lg cursor-pointer"
                 >
                   <p class="text-white text-[16px] font-medium">Completed</p>
                 </button>
@@ -189,7 +197,7 @@
               <div>
                 <!-- Completed Button -->
                 <button
-                  class="completed-btn px-3 py-[10px] bg-[#3752FD] rounded-lg"
+                  class="completed-btn px-3 py-[10px] bg-[#3752FD] rounded-lg cursor-pointer"
                 >
                   <p class="text-white text-[16px] font-medium">Completed</p>
                 </button>
@@ -216,7 +224,7 @@
               <div>
                 <!-- Completed Button -->
                 <button
-                  class="completed-btn px-3 py-[10px] bg-[#3752FD] rounded-lg"
+                  class="completed-btn px-3 py-[10px] bg-[#3752FD] rounded-lg cursor-pointer"
                 >
                   <p class="text-white text-[16px] font-medium">Completed</p>
                 </button>
@@ -243,7 +251,7 @@
               <div>
                 <!-- Completed Button -->
                 <button
-                  class="completed-btn px-3 py-[10px] bg-[#3752FD] rounded-lg"
+                  class="completed-btn px-3 py-[10px] bg-[#3752FD] rounded-lg cursor-pointer"
                 >
                   <p class="text-white text-[16px] font-medium">Completed</p>
                 </button>
@@ -272,7 +280,7 @@
               <div>
                 <!-- Completed Button -->
                 <button
-                  class="completed-btn px-3 py-[10px] bg-[#3752FD] rounded-lg"
+                  class="completed-btn px-3 py-[10px] bg-[#3752FD] rounded-lg cursor-pointer"
                 >
                   <p class="text-white text-[16px] font-medium">Completed</p>
                 </button>
@@ -297,7 +305,7 @@
           <div>
             <button
               id="clear-history"
-              class="px-5 py-[10px] bg-[#3752FD] rounded-lg"
+              class="px-5 py-[10px] bg-[#3752FD] rounded-lg cursor-pointer"
             >
               <p class="text-white text-[16px] font-medium">Clear History</p>
             </button>
