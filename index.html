@@ -43,7 +43,8 @@
             class="flex items-center gap-4 py-3 px-5 bg-[#F4F7FF] rounded-[32px]"
           >
             <img class="w-8 h-8" src="./assets/checkbox.png" alt="Tasks Icon" />
-            <h3 class="text-[32px] font-bold">23</h3>
+            <!-- Task Done -->
+            <h3 id="task-done" class="text-[32px] font-bold">23</h3>
           </div>
           <div class="bg-[#F4F7FF] p-3 rounded-[32px]">
             <img
@@ -76,7 +77,10 @@
               >
                 Task Assigned
               </p>
-              <p class="text-3xl font-bold text-[#00303C]">05</p>
+              <!-- Task Assigned -->
+              <p id="task-assigned" class="text-3xl font-bold text-[#00303C]">
+                05
+              </p>
             </div>
           </div>
           <!-- Middle Column (2/4) -->
@@ -120,15 +124,19 @@
               Debug using Chrome DevTools, check for overlapping elements
             </div>
             <div
-              class="border-t-2 border-dashed border-[#3752FD33] my-3 h-[0.8px]"
+              class="border-t-2 w-full border-dashed border-[#3752FD33] my-3 h-[0.8px]"
             ></div>
-            <div class="flex gap-4">
+            <div class="flex gap-5">
               <div class="text-[#00303C]">
                 <p class="text-sm opacity-70">Deadline</p>
                 <p class="font-medium whitespace-nowrap">21 March 2025</p>
               </div>
               <div>
-                <button class="px-3 py-[10px] bg-[#3752FD] rounded-lg">
+                <!-- Completed Button -->
+                <button
+                  id="completed-btn"
+                  class="px-3 py-[10px] bg-[#3752FD] rounded-lg"
+                >
                   <p class="text-white text-[16px] font-medium">Completed</p>
                 </button>
               </div>
@@ -138,8 +146,8 @@
       </section>
 
       <!-- right section -->
+      <!-- Activity Log Section -->
       <section class="w-full">
-        <!-- Right Section (Activity Log) -->
         <div
           class="bg-white p-6 rounded-2xl flex flex-col justify-center items-center"
         >
@@ -147,6 +155,8 @@
             <img src="./assets/activity.png" alt="" />
             <h2 class="text-xl font-medium">Activity Log</h2>
           </div>
+
+          <!-- Clear History Button -->
           <div>
             <button
               id="clear-history"
@@ -155,9 +165,13 @@
               <p class="text-white text-[16px] font-medium">Clear History</p>
             </button>
           </div>
+
+          <!-- Separator -->
           <div
             class="border-t-2 w-full border-dashed border-[#3752FD33] mt-3 h-[0.8px]"
           ></div>
+
+          <!-- Activity Log Entries -->
           <div id="activity-log" class="mt-8"></div>
         </div>
       </section>
